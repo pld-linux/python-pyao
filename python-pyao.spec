@@ -8,6 +8,7 @@ Release:	1
 License:	GPL
 Group:		Libraries/Python
 Source0:	http://www.andrewchatham.com/pyogg/download/%{module}-%{version}.tar.gz
+# Source0-md5:	010ae0163a3c23300b9b0f7d3ec94551
 URL:		http://www.andrewchatham.com/pyogg/
 BuildRequires:	libao-devel
 BuildRequires:	python-devel
