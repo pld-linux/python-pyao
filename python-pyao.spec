@@ -28,6 +28,7 @@ Summary:	pyao header and example programs
 Summary(pl):	Plik nag³ówkowy i przyk³adowy program do pyao
 Group:		Development/Languages/Python
 Requires:	%{name} = %{version}
+Requires:	libao-devel
 Obsoletes:	pyao-devel
 
 %description devel
