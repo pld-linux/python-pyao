@@ -1,4 +1,3 @@
-%include        /usr/lib/rpm/macros.python
 %define		module	pyao
 Summary:	A Python module for the the ao library
 Summary(pl):	Modu³ Pythona do biblioteki ao
