@@ -12,7 +12,6 @@ URL:		http://www.andrewchatham.com/pyogg/
 BuildRequires:	libao-devel
 BuildRequires:	python-devel
 BuildRequires:	rpm-pythonprov
-Requires:	libao
 Requires:	python-modules
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 Obsoletes:	pyao
