@@ -3,13 +3,12 @@ Summary:	A Python module for the the ao library
 Summary(pl):	Modu³ Pythona do biblioteki ao
 Name:		python-%{module}
 Version:	0.82
-Release:	1
+Release:	2
 License:	GPL
 Group:		Libraries/Python
-#Source0Download: http://www.andrewchatham.com/pyogg/
-Source0:	http://www.andrewchatham.com/pyogg/download/%{module}-%{version}.tar.gz
+Source0:	http://ekyo.nerim.net/software/pyogg/%{module}-%{version}.tar.gz
 # Source0-md5:	8e00f5154401a6f6d99efd20606e2819
-URL:		http://www.andrewchatham.com/pyogg/
+URL:		http://ekyo.nerim.net/software/pyogg/index.html
 BuildRequires:	libao-devel
 BuildRequires:	python-devel
 Requires:	python-modules
