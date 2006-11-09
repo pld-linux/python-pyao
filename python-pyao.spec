@@ -12,8 +12,8 @@ URL:		http://ekyo.nerim.net/software/pyogg/index.html
 BuildRequires:	libao-devel
 BuildRequires:	python-devel
 Requires:	python-modules
-BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 Obsoletes:	pyao
+BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
 Pyao is a wrapper for libao, an audio device abstraction library.
@@ -26,7 +26,7 @@ d¼wiêku.
 Summary:	pyao header and example programs
 Summary(pl):	Plik nag³ówkowy i przyk³adowy program do pyao
 Group:		Development/Languages/Python
-Requires:	%{name} = %{version}
+Requires:	%{name} = %{version}-%{release}
 Requires:	libao-devel
 Obsoletes:	pyao-devel
 
