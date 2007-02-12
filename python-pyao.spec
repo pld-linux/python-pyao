@@ -1,6 +1,6 @@
 %define		module	pyao
 Summary:	A Python module for the the ao library
-Summary(pl):	Modu≥ Pythona do biblioteki ao
+Summary(pl.UTF-8):   Modu≈Ç Pythona do biblioteki ao
 Name:		python-%{module}
 Version:	0.82
 Release:	2
@@ -18,13 +18,13 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %description
 Pyao is a wrapper for libao, an audio device abstraction library.
 
-%description -l pl
+%description -l pl.UTF-8
 Pyao jest wrapperem dla libao - biblioteki abstrakcji do odtwarzania
-dºwiÍku.
+d≈∫wiƒôku.
 
 %package devel
 Summary:	pyao header and example programs
-Summary(pl):	Plik nag≥Ûwkowy i przyk≥adowy program do pyao
+Summary(pl.UTF-8):   Plik nag≈Ç√≥wkowy i przyk≈Çadowy program do pyao
 Group:		Development/Languages/Python
 Requires:	%{name} = %{version}-%{release}
 Requires:	libao-devel
@@ -34,10 +34,10 @@ Obsoletes:	pyao-devel
 Pyao is a wrapper for libao, an audio device abstraction library. This
 package contains the header file and example program for pyao.
 
-%description devel -l pl
+%description devel -l pl.UTF-8
 Pyao jest wrapperem dla libao - biblioteki abstrakcji do odtwarzania
-dºwiÍku. Ten pakiet zawiera plik nag≥Ûwkowy i przyk≥adowy program dla
-modu≥u pyao.
+d≈∫wiƒôku. Ten pakiet zawiera plik nag≈Ç√≥wkowy i przyk≈Çadowy program dla
+modu≈Çu pyao.
 
 %prep
 %setup -q -n %{module}-%{version}
