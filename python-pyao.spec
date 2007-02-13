@@ -1,6 +1,6 @@
 %define		module	pyao
 Summary:	A Python module for the the ao library
-Summary(pl.UTF-8):   Moduł Pythona do biblioteki ao
+Summary(pl.UTF-8):	Moduł Pythona do biblioteki ao
 Name:		python-%{module}
 Version:	0.82
 Release:	2
@@ -24,7 +24,7 @@ dźwięku.
 
 %package devel
 Summary:	pyao header and example programs
-Summary(pl.UTF-8):   Plik nagłówkowy i przykładowy program do pyao
+Summary(pl.UTF-8):	Plik nagłówkowy i przykładowy program do pyao
 Group:		Development/Languages/Python
 Requires:	%{name} = %{version}-%{release}
 Requires:	libao-devel
