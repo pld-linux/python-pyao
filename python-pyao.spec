@@ -24,7 +24,7 @@ dźwięku.
 
 %package devel
 Summary:	pyao header and example programs
-Summary(pl.UTF-8):	Plik nagłówkowy i przykładowy program do pyao
+Summary(pl.UTF-8):	Plik nagłówkowy modułu pyao
 Group:		Development/Languages/Python
 Requires:	%{name} = %{version}-%{release}
 Requires:	libao-devel
