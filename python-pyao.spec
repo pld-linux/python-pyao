@@ -3,7 +3,7 @@ Summary:	A Python module for the the ao library
 Summary(pl.UTF-8):	Moduł Pythona do biblioteki ao
 Name:		python-%{module}
 Version:	0.82
-Release:	2
+Release:	3
 License:	GPL
 Group:		Libraries/Python
 Source0:	http://ekyo.nerim.net/software/pyogg/%{module}-%{version}.tar.gz
@@ -51,6 +51,7 @@ python setup.py build
 %install
 rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT%{py_incdir}
+install -d $RPM_BUILD_ROOT%{_examplesdir}/%{name}-%{version}
 
 python setup.py install \
 	--root $RPM_BUILD_ROOT
@@ -58,6 +59,7 @@ python setup.py install \
 install src/aomodule.h $RPM_BUILD_ROOT%{py_incdir}
 
 chmod -x test.py
+install test.py $RPM_BUILD_ROOT%{_examplesdir}/%{name}-%{version}
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -65,9 +67,9 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc AUTHORS ChangeLog README
+%{_examplesdir}/%{name}-%{version}
 %attr(755,root,root) %{py_sitedir}/*.so
 
 %files devel
 %defattr(644,root,root,755)
-%doc test.py
 %{py_incdir}/aomodule.h
