@@ -1,0 +1,49 @@
+diff -ur pyao-0.82.orig//src/aomodule.c pyao-0.82/src/aomodule.c
+--- pyao-0.82.orig//src/aomodule.c	2003-07-24 08:52:59.000000000 +0200
++++ pyao-0.82/src/aomodule.c	2010-06-08 10:20:39.028161691 +0200
+@@ -4,7 +4,7 @@
+ static ao_option *
+ dict_to_options(PyObject *dict)
+ {
+-  int pos = 0;
++  Py_ssize_t pos = 0;
+   PyObject *key, *val;
+   ao_option *head = NULL;
+   int ret;
+diff -ur pyao-0.82.orig//src/aomodule.h pyao-0.82/src/aomodule.h
+--- pyao-0.82.orig//src/aomodule.h	2003-07-24 08:58:07.000000000 +0200
++++ pyao-0.82/src/aomodule.h	2010-06-08 10:25:20.514800138 +0200
+@@ -4,6 +4,33 @@
+ #include <Python.h>
+ #include <ao/ao.h>
+ 
++typedef struct ao_device {
++	int  type; /* live output or file output? */
++	int  driver_id;
++	ao_functions *funcs;
++	FILE *file; /* File for output if this is a file driver */
++	int  client_byte_format;
++	int  machine_byte_format;
++	int  driver_byte_format;
++	char *swap_buffer;
++	int  swap_buffer_size; /* Bytes allocated to swap_buffer */
++	void *internal; /* Pointer to driver-specific data */
++} ao_device;
++
++struct ao_functions {
++	int (*test)(void);
++	ao_info* (*driver_info)(void);
++	int (*device_init)(ao_device *device);
++	int (*set_option)(ao_device *device, const char *key,
++		const char *value);
++	int (*open)(ao_device *device, ao_sample_format *format);
++	int (*play)(ao_device *device, const char *output_samples,
++		uint_32 num_bytes);
++	int (*close)(ao_device *device);
++	void (*device_clear)(ao_device *device);
++	char* (*file_extension)(void);
++};
++
+ #define OPTSIZE 1024
+ 
+ typedef struct {

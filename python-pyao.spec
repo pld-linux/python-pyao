@@ -3,11 +3,12 @@ Summary:	A Python module for the the ao library
 Summary(pl.UTF-8):	Moduł Pythona do biblioteki ao
 Name:		python-%{module}
 Version:	0.82
-Release:	5
+Release:	6
 License:	GPL
 Group:		Libraries/Python
 Source0:	http://ekyo.nerim.net/software/pyogg/%{module}-%{version}.tar.gz
 # Source0-md5:	8e00f5154401a6f6d99efd20606e2819
+Patch0:		%{name}-fix.patch
 URL:		http://ekyo.nerim.net/software/pyogg/
 BuildRequires:	libao-devel
 BuildRequires:	python-devel
@@ -41,6 +42,7 @@ modułu pyao.
 
 %prep
 %setup -q -n %{module}-%{version}
+%patch0 -p1
 
 %build
 python config_unix.py \
