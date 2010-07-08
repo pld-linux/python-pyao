@@ -3,7 +3,7 @@ Summary:	A Python module for the the ao library
 Summary(pl.UTF-8):	Moduł Pythona do biblioteki ao
 Name:		python-%{module}
 Version:	0.82
-Release:	7
+Release:	8
 License:	GPL
 Group:		Libraries/Python
 Source0:	http://ekyo.nerim.net/software/pyogg/%{module}-%{version}.tar.gz
