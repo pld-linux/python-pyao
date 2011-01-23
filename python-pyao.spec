@@ -12,6 +12,8 @@ Patch0:		%{name}-fix.patch
 URL:		http://ekyo.nerim.net/software/pyogg/
 BuildRequires:	libao-devel
 BuildRequires:	python-devel
+BuildRequires:	python-modules
+BuildRequires:	rpm-pythonprov
 Requires:	python-modules
 Obsoletes:	pyao
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
