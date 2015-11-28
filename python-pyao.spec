@@ -50,14 +50,14 @@ modułu pyao.
 python config_unix.py \
 	--prefix %{_prefix}
 python setup.py config
-python setup.py build
+%py_build
 
 %install
 rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT%{py_incdir}
 install -d $RPM_BUILD_ROOT%{_examplesdir}/%{name}-%{version}
 
-python setup.py install \
+%py_install \
 	--root $RPM_BUILD_ROOT
 
 install src/aomodule.h $RPM_BUILD_ROOT%{py_incdir}
