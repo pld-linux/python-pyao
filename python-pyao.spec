@@ -10,6 +10,7 @@ Source0:	http://ekyo.nerim.net/software/pyogg/%{module}-%{version}.tar.gz
 # Source0-md5:	8e00f5154401a6f6d99efd20606e2819
 Patch0:		%{name}-fix.patch
 URL:		http://ekyo.nerim.net/software/pyogg/
+BuildRequires:	rpmbuild(macros) >= 1.710
 BuildRequires:	libao-devel
 BuildRequires:	python-devel
 BuildRequires:	python-modules
