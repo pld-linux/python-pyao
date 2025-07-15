@@ -45,7 +45,7 @@ modułu pyao.
 
 %prep
 %setup -q -n %{module}-%{version}
-%patch0 -p1
+%patch -P0 -p1
 
 %build
 python config_unix.py \
